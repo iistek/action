@@ -1,0 +1,22 @@
+name: Markdown Word Count
+
+on:
+  pull_request:
+    paths:
+      - '**/*.md'  # Trigger on markdown files in any directory
+  push:
+    paths:
+      - '**/*.md'  # Trigger on markdown files in any directory
+
+jobs:
+  count-words:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run word count script
+        run: |
+          chmod +x ./scripts/count_words.sh
+          ./scripts/count_words.sh
