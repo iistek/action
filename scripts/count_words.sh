@@ -1,5 +1,6 @@
 #!/bin/bash
-
+current_file_path="$(realpath "$0")"
+echo "$current_file_path"
 # Function to count words in a markdown file and append the result to GitHub step summary
 count_words() {
   local file=$1
