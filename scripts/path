@@ -1,0 +1,2 @@
+current_file_path="$(realpath "$0")"
+echo "$current_file_path"
