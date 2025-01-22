@@ -2,9 +2,13 @@ name: Markdown Word Count
 
 on:
   pull_request:
+    branches:
+      - "develop"
     paths:
       - '**/*.md'  # Trigger on markdown files in any directory
   push:
+    branches:
+      - "develop"
     paths:
       - '**/*.md'  # Trigger on markdown files in any directory
 
